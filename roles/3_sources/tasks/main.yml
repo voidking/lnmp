@@ -1,0 +1,15 @@
+---
+#- name: replace sources.list
+#  copy:
+#    src: ../files/sources.list
+#    dest: /etc/apt/sources.list
+#    force: yes
+#- name: update
+#  become_user: root
+#  become: true
+#  shell: apt update
+- name: upgrade
+  become_user: root
+  become: true
+  apt: 
+    upgrade: yes

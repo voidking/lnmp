@@ -1,0 +1,8 @@
+---
+ansible_ssh_user: voidking
+ansible_ssh_pass: voidking
+ansible_sudo: voidking
+ansible_sudo_pass: voidking
+ansible_become_user: root
+ansible_become_pass: voidking
+ansible_become: true

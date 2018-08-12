@@ -1,0 +1,7 @@
+---
+- name: copy index.html
+  template:
+    src: ../templates/index.j2
+    dest: /usr/share/nginx/html/index.html
+    force: yes
+  when: install_nginx

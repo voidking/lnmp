@@ -1,0 +1,17 @@
+---
+- name: install chrony
+  apt:
+    name: chrony
+    state: latest
+- name: change config
+  copy: 
+    src: ../files/chrony.conf 
+    dest: /etc/chrony/chrony.conf
+    owner: root
+    group: root
+    mode: 0644
+    force: yes
+- name: restart chrony
+  service:
+    name: chrony
+    state: restarted

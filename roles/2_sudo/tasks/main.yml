@@ -1,0 +1,5 @@
+---
+- name: add sudo user
+  become_user: root
+  become: true
+  shell: "echo voidking ALL = NOPASSWD: ALL >> /etc/sudoers"

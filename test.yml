@@ -1,0 +1,10 @@
+---
+- hosts: all
+  vars_files:
+    - group_vars/base.yml
+  roles:
+    #- 1_key
+    #- 2_sudo
+    #- 3_sources
+    #- 4_chrony
+    - 5_software

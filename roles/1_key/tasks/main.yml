@@ -1,0 +1,11 @@
+---
+- name: copy public key
+  copy:
+    src: /home/voidking/.ssh/id_rsa.pub
+    dest: /home/voidking/.ssh/id_rsa.pub.tmp
+    owner: voidking
+    group: voidking
+    mode: 0600
+    force: yes
+- name: add public key
+  shell: cd /home/voidking/.ssh && cat id_rsa.pub.tmp | tee >> authorized_keys
